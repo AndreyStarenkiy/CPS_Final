@@ -17,6 +17,17 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.(jpg|png|gif|woff|eot|ttf|svg)/,
+        use: {
+          loader: 'url-loader', // this need file-loader
+          options: {
+            limit: 50000
+          }
+        }
+      }
+    ],
+    rules: [
       // Транспилируем js с babel
       {
         test: /\.js$/,
@@ -57,6 +68,19 @@ module.exports = {
         use: [
           {
             loader: 'file-loader?name=./static/[name].[ext]'
+          }
+        ]
+      },
+
+      {
+        test: /\.(woff|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[contenthash].[ext]',
+              outputPath: 'fonts/'
+            }
           }
         ]
       }
