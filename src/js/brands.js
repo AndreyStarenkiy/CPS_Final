@@ -7,14 +7,14 @@ var expandImage = document.querySelector('.read-more__expand-img');
 moreLessButton.addEventListener('click', function () {
   if (!swiperElement.classList.contains('swiper--expanded')) {
     expandImage.classList.add('read-more__expand-img--upside');
+    swiperElement.style.maxHeight = swiperElement.scrollHeight + 'px';
     swiperElement.classList.add('swiper--expanded');
-    swiperElement.classList.remove('swiper--collapsed');
     moreLessButton.classList.add('brands__read-more--expanded');
     buttonText.textContent = 'Скрыть';
   } else {
     expandImage.classList.remove('read-more__expand-img--upside');
+    swiperElement.style.maxHeight = '200px';
     swiperElement.classList.remove('swiper--expanded');
-    swiperElement.classList.add('swiper--collapsed');
     moreLessButton.classList.remove('brands__read-more--expanded');
     buttonText.textContent = 'Показать всё';
   }

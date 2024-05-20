@@ -1,17 +1,10 @@
-/* ПРАВКИ: 
-1) Неправильно экспортированы изображения, остался серый фон [DONE]
-2) Не перенагружай названия классов, пиши их как можно проще,
- оставляй код чистым, например, side-menu__lower-buttons-container
- и side-menu__language-buttons-container [DONE]
-3) Не нужно задавать отступ от границы каждому элементу отдельно,
- сделай общий контейнер, который будет задавать отсупы [DONE]
-*/
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'TT lakes', sans-serif;
-}
+$color_1: black;
+$color_2: inherit;
+$color_3: #7e7e82;
+$font-family_1: TT Lakes;
+$font-family_2: 'TT lakes condensed', sans-serif;
+$background-color_1: white;
+$background-color_2: transparent;
 
 .side-menu {
   position: absolute;
@@ -22,148 +15,157 @@ body {
   width: 320px;
   height: 100vh;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.17);
+
+  &__header {
+    width: 100%;
+    height: 86px;
+    display: flex;
+  }
+  &__close-btn {
+    border: none;
+    margin: 23px 24px;
+    margin-right: 16.73px;
+    padding: 0;
+    background-color: $background-color_1;
+  }
+  &__logo {
+    margin: auto 0;
+    width: 97px;
+    height: 51px;
+  }
+  &__logo-img {
+    width: 97px;
+    height: 51px;
+  }
+  &__search-btn {
+    border: none;
+    margin: 23px 24px;
+    padding: 0;
+    margin-left: auto;
+    background-color: $background-color_1;
+  }
+  &__options {
+    margin: 0;
+    padding: 0;
+    padding-top: 17px;
+    margin-bottom: auto;
+    list-style: none;
+    font-family: $font-family_1;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: $color_1;
+    font-weight: 400;
+  }
+  &__link {
+    display: flex;
+    text-decoration: none;
+    color: $color_2;
+    height: 56px;
+    padding-left: 20px;
+    align-items: center;
+
+    &::before {
+      content: '';
+      position: relative;
+      display: inline-block;
+      left: -20px;
+      width: 0;
+      height: 32px;
+      border: 2px solid #41f6d7;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      transform: scale(0);
+      transition:
+        transform 0.2s linear,
+        transform 0.25s linear;
+    }
+    &:hover {
+      &::before {
+        transform: scale(1);
+      }
+    }
+  }
+  &__item {
+    &:hover {
+      color: $color_3;
+    }
+  }
 }
 
-.side-menu__header {
-  width: 100%;
-  height: 86px;
-  display: flex;
-}
-
-.side-menu__close-btn {
-  border: none;
-  margin: 23px 24px;
-  margin-right: 16.73px;
-  padding: 0;
-  background-color: white;
-}
-
-.side-menu__logo {
-  margin: auto 0;
-}
-
-.side-menu__logo,
-.side-menu__logo-img {
-  width: 97px;
-  height: 51px;
-}
-
-.side-menu__search-btn {
-  border: none;
-  margin: 23px 24px;
-  padding: 0;
-  margin-left: auto;
-  background-color: white;
-}
-
-.side-menu__options {
-  margin: 0;
-  padding: 0;
-  padding-top: 17px;
-  margin-bottom: auto;
-  list-style: none;
-  font-family: TT Lakes;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  text-align: left;
-  color: black;
-  font-weight: 400;
-}
-
-.side-menu__link {
-  display: flex;
-  text-decoration: none;
-  color: inherit;
-  height: 56px;
-  padding-left: 20px;
-  align-items: center;
-}
-
-.side-menu__link::before {
-  content: '';
-  position: relative;
-  display: inline-block;
-  left: -20px;
-  width: 0;
-  height: 32px;
-  border: 2px solid #41f6d7;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  transform: scale(0);
-  transition:
-    transform 0.2s linear,
-    transform 0.25s linear;
-}
-
-.side-menu__item:hover {
-  color: #7e7e82;
-}
-
-.side-menu__link:hover::before {
-  transform: scale(1);
-}
-
-.side-footer__box {
-  display: flex;
-  flex-direction: column;
-  padding-left: 24px;
-  padding-bottom: 32px;
-}
-
-.side-footer__circle-buttons {
-  display: flex;
-  gap: 16px;
-  margin: 16px 0;
-}
-
-.side-footer__call,
-.side-footer__chat,
-.side-footer__profile {
-  padding-block: 0;
-  padding-inline: 0;
-  border: none;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.side-footer__mail {
-  margin-bottom: 12px;
-  text-decoration: none;
-  color: inherit;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  text-align: left;
-  font-weight: 550;
-}
-
-.side-footer__number {
-  display: block;
-  margin-bottom: 40px;
-  text-decoration: none;
-  color: inherit;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: -0.6px;
-  text-align: left;
-  font-weight: bold;
-}
-
-.side-footer__lang-btn {
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: 'TT lakes condensed', sans-serif;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  padding: 0 3px;
-  background-color: transparent;
-}
-
-.side-footer__lang-btn:disabled {
-  color: #7e7e82;
+.side-footer {
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-bottom: 32px;
+  }
+  &__circle-buttons {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  &__call {
+    padding-block: 0;
+    padding-inline: 0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: $background-color_2;
+  }
+  &__chat {
+    padding-block: 0;
+    padding-inline: 0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: $background-color_2;
+  }
+  &__profile {
+    padding-block: 0;
+    padding-inline: 0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: $background-color_2;
+  }
+  &__mail {
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: $color_2;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    font-weight: 550;
+  }
+  &__number {
+    display: block;
+    margin-bottom: 40px;
+    text-decoration: none;
+    color: $color_2;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    text-align: left;
+    font-weight: bold;
+  }
+  &__lang-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: $font-family_2;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding: 0 3px;
+    background-color: $background-color_2;
+    &:disabled {
+      color: $color_3;
+    }
+  }
 }
