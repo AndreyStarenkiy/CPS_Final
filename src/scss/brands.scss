@@ -60,6 +60,7 @@ html {
 
 .swiper-slide {
   display: flex;
+  margin-right: 0 !important;
   padding: 16px;
   box-sizing: border-box;
   width: 240px;
@@ -128,6 +129,10 @@ html {
     max-height: 600px;
   }
 
+  .swiper-wrapper--initialized {
+    display: flex !important;
+  }
+
   .swiper::after {
     display: none;
   }
@@ -147,7 +152,7 @@ html {
   }
 
   .swiper-slide {
-    width: 100%;
+    margin-right: 0;
   }
 
   .swiper-pagination {
@@ -173,7 +178,9 @@ html {
     letter-spacing: -0.20000000298023224px;
     text-align: left;
     cursor: pointer;
-    transition: 0.8s margin-bottom;
+    transition:
+      0.5s margin-bottom,
+      1s margin-top;
   }
 
   .brands__read-more--expanded {
@@ -184,10 +191,12 @@ html {
     width: 24px;
     height: 24px;
     background-color: #f8f8f8;
+    transition-duration: 0.3s;
   }
 
   .read-more__expand-img--upside {
     transform: rotate(180deg);
+    transition-duration: 0.3s;
   }
 
   .read-more__text {

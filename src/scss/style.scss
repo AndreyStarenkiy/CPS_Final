@@ -1,9 +1,11 @@
 @import url('../fonts/stylesheet.css');
 
+@import '../../node_modules/normalize.css/normalize.css';
+
 @import 'app.scss';
-@import 'base.css';
-@import 'side-menu.css';
-@import 'brands.css';
+@import 'base.scss';
+@import 'side-menu.scss';
+@import 'brands.scss';
 
 body {
   font-family: 'TT lakes', sans-serif;
