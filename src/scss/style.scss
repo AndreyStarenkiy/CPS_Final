@@ -3,10 +3,13 @@
 @import '../../node_modules/normalize.css/normalize.css';
 
 @import 'global.scss';
-@import 'base.scss';
-@import 'side-menu.scss';
-@import 'brands.scss';
-@import 'types.scss';
+@import 'blocks/base.scss';
+@import 'blocks/side-menu.scss';
+@import 'blocks/brands.scss';
+@import 'blocks/types.scss';
+@import 'blocks/types-swiper-slide.scss';
+@import 'blocks/show-brands.scss';
+@import 'blocks/brands-swiper-slide.scss';
 
 body {
   font-family: 'TT lakes', sans-serif;

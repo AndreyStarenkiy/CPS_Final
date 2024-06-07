@@ -9,45 +9,6 @@ $background-color_3: #dddddd;
 $background-color_4: #b5b6bc;
 $background-color_5: none;
 
-.swiper {
-  box-sizing: border-box;
-  padding-top: 16px;
-  padding-left: 16px;
-  padding-bottom: 16px;
-  width: 100%;
-  max-height: 200px;
-  background-color: $background-color_1;
-  transition:
-    0.8s max-height,
-    0.8s height;
-
-  @media screen and (min-width: 768px) {
-    padding-left: 0;
-    margin-top: 0;
-    overflow: hidden;
-    transition: 0.337s max-height;
-    height: auto;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    margin-top: -120px;
-    width: 24px;
-    height: 81px;
-    z-index: 11;
-    background: linear-gradient(
-      -90deg,
-      #f8f8f8 16.84%,
-      rgba(248, 248, 248, 0.0001) 100%
-    );
-
-    @media screen and (min-width: 768px) {
-      display: none;
-    }
-  }
-}
 .swiper-wrapper {
   box-sizing: border-box;
   display: grid;
@@ -108,18 +69,13 @@ $background-color_5: none;
     margin: 0;
   }
 
-  &__show-brands {
-    display: none;
+  &__expand-brands {
     margin-left: 24px;
-    margin-top: 8px;
+    margin-top: 24px;
     margin-bottom: 34px;
     transition:
       0.5s margin-bottom,
       1s margin-top;
-
-    @media screen and (min-width: 768px) {
-      display: flex;
-    }
 
     @media screen and (min-width: 1120px) {
       margin-left: 32px;
@@ -131,9 +87,49 @@ $background-color_5: none;
       }
     }
   }
+
+  &__swiper {
+    box-sizing: border-box;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+    max-height: 200px;
+    background-color: $background-color_1;
+    transition:
+      0.8s max-height,
+      0.8s height;
+
+    @media screen and (min-width: 768px) {
+      padding-left: 0;
+      margin-top: 0;
+      overflow: hidden;
+      transition: 0.337s max-height;
+      height: auto;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      margin-top: -120px;
+      width: 24px;
+      height: 81px;
+      z-index: 11;
+      background: linear-gradient(
+        -90deg,
+        #f8f8f8 16.84%,
+        rgba(248, 248, 248, 0.0001) 100%
+      );
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
 }
 
-.show-brands {
+.expand-brands {
   display: flex;
   height: 24px;
   width: 134px;
@@ -196,35 +192,4 @@ $background-color_5: none;
 .swiper-pagination-bullet-active {
   background-color: $background-color_4;
   opacity: 1;
-}
-
-.swiper-slide {
-  display: flex;
-  margin-right: 0 !important;
-  padding: 16px;
-  box-sizing: border-box;
-  width: 240px;
-  height: 72px;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #eaeaea;
-  border-radius: 6px;
-  background-color: $background-color_2;
-
-  @media screen and (min-width: 768px) {
-    margin-right: 0;
-  }
-
-  &__logo {
-    display: block;
-  }
-
-  &__arrow {
-    display: block;
-    width: 40px;
-    height: 40px;
-    margin-left: 0;
-
-    margin-top: auto;
-  }
 }

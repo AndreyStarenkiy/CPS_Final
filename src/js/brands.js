@@ -1,21 +1,21 @@
 var swiperElement = document.querySelector('.swiper');
 var swiperWrapper = document.querySelector('.swiper-wrapper');
-var moreLessButton = document.querySelector('.brands__show-brands');
-var buttonText = document.querySelector('.show-brands__text');
-var expandImage = document.querySelector('.show-brands__expand-img');
+var moreLessButton = document.querySelector('.brands__expand-brands');
+var buttonText = document.querySelector('.expand-brands__text');
+var expandImage = document.querySelector('.expand-brands__expand-img');
 
 moreLessButton.addEventListener('click', function () {
   if (!swiperElement.classList.contains('swiper--expanded')) {
-    expandImage.classList.add('show-brands__expand-img--upside');
+    expandImage.classList.add('expand-brands__expand-img--upside');
     swiperElement.style.maxHeight = swiperElement.scrollHeight + 'px';
     swiperElement.classList.add('swiper--expanded');
-    moreLessButton.classList.add('brands__show-brands--expanded');
+    moreLessButton.classList.add('brands__expand-brands--expanded');
     buttonText.textContent = 'Скрыть';
   } else {
-    expandImage.classList.remove('show-brands__expand-img--upside');
+    expandImage.classList.remove('expand-brands__expand-img--upside');
     swiperElement.style.maxHeight = '200px';
     swiperElement.classList.remove('swiper--expanded');
-    moreLessButton.classList.remove('brands__show-brands--expanded');
+    moreLessButton.classList.remove('brands__expand-brands--expanded');
     buttonText.textContent = 'Показать всё';
   }
 });
@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
       swiperWrapper.classList.add('swiper-wrapper--initialized');
       console.log('SWIPER INITIALIZED');
-      moreLessButton.classList.add('show-brands--disabled');
+      moreLessButton.classList.add('expand-brands--disabled');
     }
   };
 
