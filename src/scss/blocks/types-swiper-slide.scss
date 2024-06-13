@@ -1,6 +1,6 @@
 .types-swiper-slide {
   display: flex;
-  margin-right: 0;
+  margin-right: 0 !important;
   padding: 16px;
   box-sizing: border-box;
   width: 240px;
@@ -30,6 +30,7 @@
 
   &__arrow {
     display: block;
+    align-self: end;
     width: 40px;
     height: 40px;
     margin-left: 0;

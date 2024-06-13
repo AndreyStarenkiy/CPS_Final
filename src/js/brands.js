@@ -13,36 +13,9 @@ moreLessButton.addEventListener('click', function () {
     buttonText.textContent = 'Скрыть';
   } else {
     expandImage.classList.remove('expand-brands__expand-img--upside');
-    swiperElement.style.maxHeight = '200px';
+    swiperElement.style.maxHeight = '192px';
     swiperElement.classList.remove('swiper--expanded');
     moreLessButton.classList.remove('brands__expand-brands--expanded');
     buttonText.textContent = 'Показать всё';
   }
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  const initializeSwiper = () => {
-    console.log('initializeSwiper WoRKS');
-    const breakpoint = window.matchMedia('(max-width: 767.98px)');
-
-    if (breakpoint.matches) {
-      console.log('Kapusta)');
-      const swiper = new Swiper('.swiper', {
-        direction: 'horizontal',
-        loop: false,
-        spaceBetween: 16,
-        slidesPerView: 'auto',
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        }
-      });
-
-      swiperWrapper.classList.add('swiper-wrapper--initialized');
-      console.log('SWIPER INITIALIZED');
-      moreLessButton.classList.add('expand-brands--disabled');
-    }
-  };
-
-  initializeSwiper();
 });

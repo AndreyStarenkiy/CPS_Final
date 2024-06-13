@@ -1,6 +1,6 @@
 import '../scss/style.scss';
-import '../js/brands.js';
-import '../js/types.js';
-import '../js/app.js';
+import './swiper.js';
+import './brands.js';
+import './types.js';
 
 console.log('Works!');

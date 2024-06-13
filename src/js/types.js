@@ -24,6 +24,7 @@ const breakpoint = window.matchMedia('(max-width: 767.98px)');
 
 if (breakpoint.matches) {
   console.log('Kapusta)');
+  swiperElement.classList.add('types__swiper--initialized');
   swiperWrapper.classList.add('types__swiper-wrapper--initialized');
   console.log('SWIPER INITIALIZED');
   moreLessButton.classList.add('expand-types--disabled');

@@ -1,16 +1,22 @@
 @import url('../fonts/stylesheet.css');
 
 @import '../../node_modules/normalize.css/normalize.css';
+@import 'variables.scss';
+@import 'blocks/swiper/swiper.scss';
 
 @import 'global.scss';
-@import 'blocks/base.scss';
+
+@import 'blocks/main.scss';
+@import 'blocks/header.scss';
+@import 'blocks/upper-header.scss';
+@import 'blocks/overflow-menu.scss';
+@import 'blocks/article.scss';
+
 @import 'blocks/side-menu.scss';
 @import 'blocks/brands.scss';
 @import 'blocks/types.scss';
 @import 'blocks/types-swiper-slide.scss';
+@import 'blocks/expand-types.scss';
+
 @import 'blocks/show-brands.scss';
 @import 'blocks/brands-swiper-slide.scss';
-
-body {
-  font-family: 'TT lakes', sans-serif;
-}
