@@ -13,7 +13,7 @@ moreLessButton.addEventListener('click', function () {
     buttonText.textContent = 'Скрыть';
   } else {
     expandImage.classList.remove('expand-types__expand-img--upside');
-    swiperElement.style.maxHeight = '200px';
+    swiperElement.style.maxHeight = '192px';
     swiperElement.classList.remove('swiper--expanded');
     moreLessButton.classList.remove('types__expand-types--expanded');
     buttonText.textContent = 'Показать всё';

@@ -4,12 +4,12 @@
   flex-direction: column;
   gap: 16px;
 
-  @media screen and (min-width: 768px) and (max-width: 1119.98px) {
+  @media screen and (min-width: 768px) {
     flex-direction: row;
     gap: 48px;
   }
 
-  @media screen and (min-width: 1120px) {
+  @media screen and (min-width: 1440px) {
     flex-direction: row;
     padding-bottom: 51px;
     gap: 36px;
@@ -19,19 +19,17 @@
     padding-bottom: 35px;
     background-color: $background-color_1;
 
-    @media screen and (min-width: 768px) and (max-width: 1119.98px) {
+    @media screen and (min-width: 768px) {
       padding-right: 25px;
       width: 50%;
-      background-color: $background-color_1;
     }
 
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1440px) {
       flex-direction: row;
       gap: 36px;
-      padding-top: 16px;
+      padding-top: 8px;
+      padding-bottom: 0;
       padding-right: 28.65px;
-      width: 50%;
-      background-color: $background-color_1;
     }
   }
 }

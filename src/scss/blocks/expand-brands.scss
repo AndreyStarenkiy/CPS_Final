@@ -24,10 +24,8 @@
     }
 
     &--upside {
-      @media screen and (min-width: 768px) {
-        transform: rotate(180deg);
-        transition-duration: 0.3s;
-      }
+      transform: rotate(180deg);
+      transition-duration: 0.3s;
     }
   }
 

@@ -2,9 +2,11 @@
   display: flex;
   margin-right: 0 !important;
   padding: 16px;
-  box-sizing: border-box;
-  width: 240px;
-  height: 160px;
+  //box-sizing: border-box;
+  flex: 1;
+  min-width: 207px;
+  max-width: 277px;
+  height: 127px;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #eaeaea;
@@ -15,11 +17,17 @@
 
   @media screen and (min-width: 768px) {
     margin-right: 0;
-    width: 224px;
+    width: 191px;
   }
 
-  @media screen and (min-width: 1120px) {
-    width: 240px;
+  @media screen and (min-width: 1440px) {
+    width: 207px;
+  }
+
+  &:hover {
+    .types-swiper-slide__arrow {
+      margin-right: -8px;
+    }
   }
 
   &__text {
@@ -34,5 +42,6 @@
     width: 40px;
     height: 40px;
     margin-left: 0;
+    transition: all 0.3s;
   }
 }

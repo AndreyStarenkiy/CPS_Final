@@ -1,11 +1,7 @@
 .article {
   background-color: $background-color_1;
 
-  @media screen and (min-width: 768px) and (max-width: 1119.98px) {
-    width: 50%;
-  }
-
-  @media screen and (min-width: 1120px) {
+  @media screen and (min-width: 768px) {
     width: 50%;
   }
 
@@ -18,49 +14,79 @@
     line-height: 18px;
     letter-spacing: 0.2px;
 
-    @media screen and (min-width: 768px) and (max-width: 1119.98px) {
+    @media screen and (min-width: 768px) {
       padding-right: 0;
       padding-left: 0;
       margin-top: 0;
       margin-left: 24px;
     }
 
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1440px) {
       line-height: 20px;
       font-size: 14px;
       letter-spacing: 0.2px;
       padding-right: 0;
       padding-left: 0;
+      margin-top: 16px;
       margin-left: 34px;
       margin-bottom: 20px;
     }
   }
   &__text-2 {
     padding-left: 16px;
-    display: none;
+    margin-top: 0;
+    display: inline-block;
 
-    @media screen and (min-width: 768px) and (max-width: 1119.98px) {
-      display: block;
-      padding-left: 0;
-      margin-left: 24px;
-      margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      padding-left: 24px;
       font-size: 14px;
       line-height: 20px;
       letter-spacing: 0.2px;
     }
+
+    @media screen and (min-width: 1440px) {
+      display: none;
+    }
   }
-  &__text-2-exp {
+  &__text-2-wrapper {
+    display: block;
+    max-height: 0;
+    transition: all 0.3s;
+    overflow: hidden;
+
+    @media screen and (min-width: 1440px) {
+      display: none;
+    }
+
+    &--expanded {
+    }
+  }
+  &__text-3 {
     padding-left: 16px;
+    margin-top: 0;
     display: none;
 
-    @media screen and (min-width: 1120px) {
+    @media screen and (min-width: 1440px) {
       line-height: 20px;
       font-size: 14px;
       letter-spacing: 0.2px;
       padding-right: 0;
-      display: block;
+      display: inline-block;
       padding-left: 0;
       margin-left: 34px;
+    }
+  }
+  &__text-3-wrapper {
+    display: none;
+    max-height: 0;
+    transition: all 0.3s;
+    overflow: hidden;
+
+    @media screen and (min-width: 1440px) {
+      display: block;
+    }
+
+    &--expanded {
     }
   }
   &__read-more {
@@ -69,41 +95,51 @@
     align-items: center;
     text-decoration: none;
     color: $color_1;
-    margin-left: 48px;
+    margin-left: 18px;
+    border: none;
+    background-color: $background-color_1;
+    padding: 0;
+    cursor: pointer;
 
     @media screen and (min-width: 768px) and (max-width: 1119.98px) {
-      margin-left: 57px;
+      margin-left: 27px;
     }
 
-    @media screen and (min-width: 1120px) {
-      margin-left: 64px;
+    @media screen and (min-width: 1440px) {
+      margin-left: 34px;
+    }
+
+    &--expanded {
+      padding-top: 16px;
+    }
+  }
+  &__expand-img {
+    width: 24px;
+    height: 24px;
+    transform: var(--arrowRotation, rotate(0deg));
+    transition: all 0.3s;
+
+    &--expanded {
+      transform: rotate(180deg);
     }
   }
   &__text-button {
+    position: relative;
     margin: 0;
-
-    @media screen and (min-width: 768px) and (max-width: 1119.98px) {
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: -0.2px;
-      color: $color_2;
-      font-weight: 500;
-    }
+    padding-left: 9px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $color_2;
+    font-weight: 500;
 
     &::before {
-      content: url('../img/expand.svg');
       position: absolute;
-      left: 16px;
+      left: 0;
       width: 24px;
       height: 24px;
-
-      @media screen and (min-width: 768px) and (max-width: 1119.98px) {
-        left: 25px;
-      }
-
-      @media screen and (min-width: 1120px) {
-        left: 32px;
-      }
+      transform: var(--arrowRotation, rotate(0deg));
+      transition: all 0.3s;
     }
   }
 }

@@ -1,5 +1,5 @@
 var swiperElement = document.querySelector('.swiper');
-var swiperWrapper = document.querySelector('.swiper-wrapper');
+var swiperWrapper = document.querySelector('.brands__swiper-wrapper');
 var moreLessButton = document.querySelector('.brands__expand-brands');
 var buttonText = document.querySelector('.expand-brands__text');
 var expandImage = document.querySelector('.expand-brands__expand-img');
@@ -19,3 +19,9 @@ moreLessButton.addEventListener('click', function () {
     buttonText.textContent = 'Показать всё';
   }
 });
+
+const breakpoint = window.matchMedia('(max-width: 767.98px)');
+
+if (breakpoint.matches) {
+  swiperWrapper.classList.add('brands__swiper-wrapper--initialized');
+}

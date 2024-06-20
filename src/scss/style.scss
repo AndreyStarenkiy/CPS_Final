@@ -6,6 +6,7 @@
 
 @import 'global.scss';
 
+@import 'blocks/app.scss';
 @import 'blocks/main.scss';
 @import 'blocks/header.scss';
 @import 'blocks/upper-header.scss';
@@ -13,6 +14,10 @@
 @import 'blocks/article.scss';
 
 @import 'blocks/side-menu.scss';
+@import 'blocks/side-menu-wrapper.scss';
+@import 'blocks/modal-cover.scss';
+@import 'blocks/modal-feedback.scss';
+@import 'blocks/modal-call.scss';
 @import 'blocks/brands.scss';
 @import 'blocks/types.scss';
 @import 'blocks/types-swiper-slide.scss';
@@ -24,3 +29,5 @@
 @import 'blocks/prices-swiper-slide.scss';
 @import 'blocks/prices.scss';
 @import 'blocks/expand-prices.scss';
+
+@import 'blocks/footer.scss';
