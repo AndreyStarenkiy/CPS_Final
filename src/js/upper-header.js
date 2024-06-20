@@ -21,10 +21,7 @@ const bodyScroll = require('body-scroll-toggle');
 bodyScroll.disable();
 bodyScroll.enable();
 
-console.log('???');
-
 feedbackBtn.addEventListener('click', function () {
-  console.log('click chat');
   modalFeedback.classList.add('modal-feedback--modal-open');
   cover.classList.add('modal-cover--modal-open');
   body.classList.add('body--modal-open');
@@ -34,7 +31,6 @@ feedbackBtn.addEventListener('click', function () {
 });
 
 callBtn.addEventListener('click', function () {
-  console.log('click call');
   modalCall.classList.add('modal-call--modal-open');
   cover.classList.add('modal-cover--modal-open');
   body.classList.add('body--modal-open');

@@ -36,13 +36,7 @@ moreLessButton.addEventListener('click', function () {
 const breakpoint = window.matchMedia('(max-width: 767.98px)');
 
 if (breakpoint.matches) {
-  console.log('Prices-swiper initialized!');
   swiperElement.classList.add('prices__swiper--initialized');
-  /*
-  for (var i = 0; i < pricesSlide.length; i++) {
-    pricesSlide[i].classList.add('prices-swiper-slide--initialized');
-  }
-  */
   moreLessButton.classList.add('expand-prices--disabled');
 } else {
   swiperWrapper.classList.add('prices__swiper-wrapper--swiper-off');
@@ -73,32 +67,3 @@ if (breakpoint.matches) {
   pricesInfoSlide.classList.add('prices-swiper-slide__info-slide--swiper-off');
   pricesSpacer.classList.add('prices-swiper-slide__spacer--swiper-off');
 }
-
-/* personal swiper 
-
-window.addEventListener('DOMContentLoaded', () => {
-  const initializeSwiper = () => {
-    console.log('pricey swiper');
-    const breakpoint = window.matchMedia('(max-width: 767.98px)');
-
-    if (breakpoint.matches) {
-      console.log('Kapusta)');
-      const swiper = new Swiper('.prices__swiper', {
-        direction: 'horizontal',
-        loop: false,
-        spaceBetween: 16,
-        slidesPerView: 'auto',
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        }
-      });
-
-      swiperWrapper.classList.add('swiper-wrapper--initialized');
-      moreLessButton.classList.add('expand-brands--disabled');
-    }
-  };
-
-  initializeSwiper();
-});
-*/

@@ -8,5 +8,3 @@ import './article.js';
 import './modal-feedback.js';
 import './side-menu.js';
 import './modal-call.js';
-
-console.log('Works!');

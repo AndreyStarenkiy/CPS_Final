@@ -10,7 +10,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const breakpoint = window.matchMedia('(max-width: 767.98px)');
 
     if (breakpoint.matches) {
-      console.log('Kapusta)');
       const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
         loop: false,
